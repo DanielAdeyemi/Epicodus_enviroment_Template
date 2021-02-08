@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const DotenvWebpackPlugin = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { resolve } = require('path');
 const path = require('path');
@@ -15,6 +16,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new DotenvWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'template',
       template: './src/index.html',
